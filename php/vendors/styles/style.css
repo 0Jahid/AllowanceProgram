@@ -1,0 +1,387 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+:root {
+    --dark: #161824;
+    --lite-dark: #202334;
+    --signup-bg: #161824;
+    --login-bg: #161824;
+    --signup-color: cyan;
+    --login-color: #49e349;
+    --txt-color: whitesmoke;
+    --border-color: #161f36;
+    --table-border: rgb(58, 58, 58);
+}
+.mainBody {
+    background-image: url("../images/bgimage.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header.home,
+header.reg {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 13px;
+}
+.headingText {
+    margin-top: 210px;
+    margin-bottom: 135px;
+}
+header.reg {
+    position: sticky;
+    top: 0px;
+}
+header .projectTitle a {
+    font-size: 25px;
+    color: var(--txt-color);
+}
+header .signUp a button,
+header .logIn a button,
+header .notice a button {
+    width: 120px;
+    box-shadow: rgba(255, 255, 255, 0.1) -2px -2px 6px, rgba(0, 0, 0, 0.8) 2px 2px 6px;
+    background-color: rgba(32, 35, 52, 0.557);
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+header .signUp a button {
+    background-color: var(--signup-bg);
+    color: var(--signup-color);
+}
+header .logIn a button {
+    background-color: var(--login-bg);
+    color: var(--login-color);
+}
+header .notice a button {
+    background-color: var(--signup-bg);
+    color: var(--signup-color);
+}
+header .signUp a button:active,
+header .logIn a button:active,
+header .notice a button:active {
+    box-shadow: rgba(255, 255, 255, 0.1) -2px -2px 6px inset, rgba(0, 0, 0, 0.8) 2px 2px 6px inset;
+}
+header .signUp a button:hover,
+header .logIn a button:hover {
+    background-color: rgba(32, 35, 52, 0.557);
+}
+.authentication {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.indexMain {
+    height: 100vh;
+    background-color: rgba(32, 35, 52, 0.76);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.base {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+.base h1 {
+    color: ghostwhite;
+    font-size: 70px;
+}
+.base h2 {
+    color: gainsboro;
+    font-size: 40px;
+}
+.base h3 {
+    color: gainsboro;
+    font-size: 24px;
+    margin-top: 0cm;
+}
+.base p {
+    color: darkgray;
+    font-size: 15px;
+    text-align: center;
+}
+.base .getStartedBtn a button {
+    margin-top: 10px;
+    border: 3px solid cyan;
+    background-color: rgba(51, 221, 255, 0.1);
+    color: cyan;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.base .getStartedBtn a button:hover {
+    background-color: cyan;
+    color: var(--txt-color);
+}
+.logIn {
+    display: flex;
+    gap: 14px;
+}
+.secondaryBody {
+    background-color: var(--lite-dark);
+}
+.formHeading h1 {
+    text-align: center;
+    color: rgb(230, 227, 227);
+    padding-top: 27px;
+    padding-bottom: 33px;
+}
+.secondaryMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lite-dark);
+    gap: 30px;
+}
+form.signup {
+    width: 650px;
+    margin: 30px 0 23px 0px;
+    padding: 12px;
+    background-color: var(--dark);
+    border-radius: 4px;
+}
+form.signup .formBody {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+form.signup .fields span {
+    color: var(--txt-color);
+    width: 39px;
+    margin-right: -2px;
+    background-color: rgb(32, 35, 52);
+    display: inline-block;
+    text-align: center;
+    padding: 9px;
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+form.signup .allFields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+form.signup .allFields .fields input {
+    width: 270px;
+    background-color: var(--lite-dark);
+    color: rgb(190, 185, 185);
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 17px;
+    padding: 5px 8px;
+}
+form.signup .allFields .fields input:not(input[type="date"]) {
+    padding: 8px;
+}
+form.signup .allFields .fields input:focus {
+    border: 1px solid rgb(128, 189, 255);
+    outline: none;
+    box-shadow: none;
+}
+.captions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.captions .filedsLabel {
+    color: var(--txt-color);
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.options {
+    height: 34px;
+    display: flex;
+    align-items: center;
+}
+.options input[type="radio"] {
+    width: 20px;
+    cursor: pointer;
+}
+.options input[type="radio"]:focus {
+    outline: none;
+}
+.options label {
+    color: var(--txt-color);
+    margin: 0px 13px 0px 2px;
+}
+.submitDiv {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.submitDiv button {
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: cyan;
+    cursor: pointer;
+    padding: 10px 23px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.submitDiv button:hover {
+    background-color: rgb(5, 185, 185);
+}
+.new_remind {
+    padding: 30px 67px 12px 85px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember,
+.newAccount {
+    color: var(--txt-color);
+    font-size: 17px;
+}
+.remember input[type="checkbox"] {
+    cursor: pointer;
+}
+.remember label {
+    margin-left: 3px;
+}
+.newAccount a {
+    color: rgb(0, 123, 255);
+}
+.newAccount a:hover {
+    color: rgb(0, 95, 195);
+}
+.showDataForm {
+    padding: 30px !important;
+}
+.showDataForm #showData {
+    background-color: var(--lite-dark);
+    color: var(--txt-color);
+    font-size: 15px;
+    width: 100%;
+    padding: 15px 16px;
+    height: 325px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+#showData {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#showData * {
+    color: rgb(214, 214, 214);
+}
+.paymentGateway {
+    padding: 20px 0px 15px;
+    display: flex;
+    justify-content: center;
+}
+.paymentGateway button {
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(71, 106, 160);
+    cursor: pointer;
+    padding: 10px 23px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.paymentGateway button:hover {
+    background-color: rgb(0, 95, 195);
+}
+.chartContainer {
+    width: 500px;
+    height: 464px;
+}
+.graphFullBody {
+    padding: 30px 30px 70px;
+    margin-bottom: 23px;
+    background-color: var(--dark);
+}
+.boxHead {
+    padding: 0px 0px 15px;
+    border-bottom: 2px solid var(--lite-dark);
+}
+.boxHead h4 {
+    color: var(--txt-color);
+}
+.boxBody {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+#example-chartjs-lineArea {
+    width: 409px !important;
+}
+.infoBtns {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+.infoBtns button {
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 9px;
+    width: 120px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.showDataContainer .infoBtns button {
+    background-color: rgb(68, 152, 241);
+}
+.showDataContainer .infoBtns button:first-child {
+    background-color: rgb(238, 38, 38);
+}
+.showDataContainer .infoBtns button:first-child:hover {
+    background-color: rgb(170, 19, 19);
+}
+.showDataContainer .infoBtns button:hover {
+    background-color: #4f82da;
+}
+.chartContainer .infoBtns button:hover {
+    background-color: #598ce4;
+}
+.chartContainer .infoBtns button {
+    background-color: #428BFA;
+}
+/* --------------pending page------------- */
+.pendingMain {
+    padding: 30px;
+}
+.pendingContainer {
+    background-color: var(--dark);
+}
+tr, th {
+    border: 2px solid var(--table-border) !important;
+}
+tr th, tr td {
+    color: rgb(223, 223, 223);
+}
+td {
+    border-right: 2px solid var(--table-border);
+}
